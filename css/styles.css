@@ -39,7 +39,7 @@ a:hover,
 a:focus,
 .contact-top a:hover,
 .contact-top a:focus{
-    color: #2196F3
+    color: #2196F3;
 }
 .black-text{
     color: #212121;
@@ -70,7 +70,7 @@ header ul.contact-top{
     padding-left: 0px;
 }
 header ul.contact-top li:first-child{
-    padding-right: 60px;
+    padding-right: 30px;
 }
 header .logo{
     padding-right: 100px;
@@ -98,10 +98,17 @@ nav a{
 nav a:first-child{
     padding-left: 0;
 }
-.contact-top{
+ul.contact-top{
     display: flex;
-    align-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+}
+li.contact-top{
     align-items: center;
+}
+.contact-top svg{
+    fill: #757575;
+    margin-right: 10px;
 }
 .contact-top a {
     color: #757575;
@@ -109,15 +116,85 @@ nav a:first-child{
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contact-top a:hover svg,
+.contact-top a:focus svg{
+    fill: #2196F3;
 }
 /*footer*/
-footer {
+footer{
     background-color: #2F303A;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    height:252px;
+}
+footer .logo {
+    margin: 0;
+}
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+footer .contact-in-footer{
+    margin-right: 70px;
+    height: 100%;
+    padding-top:60px;
+}
+.contact-in-footer a{
+    width:145px;
+    height:31px;
+}
+.footer-right{
+    height: 100%;
+    padding-top: 72px;
+}
+ul.socials-in-footer {
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.socials-in-footer li{
+    width: 44px;
+    height: 44px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff1a;
+    border-radius: 50%;
+}
+.socials-in-footer li:first-child {
+    margin-left: 0;
+}
+.socials-in-footer svg{
+    fill:#FFFFFF;
+}
+.socials-in-footer li:hover,
+.socials-in-footer li:focus{
+    background: #2196F3;
+    border-radius: 50%;
+}
+.footer-right{
+    
+}
+.footer-right p{
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin:0;
 }
 
+/*dalsze style*/
 address p {
     font-weight: 400;
     font-size: 14px;
@@ -144,10 +221,7 @@ address p {
     margin: 0;
     padding-top:9px;
 }
-footer .logo{
-    margin:0;
-    padding-top:60px;
-}
+
 /*wszystkie linki*/
 a{
     text-decoration: none;
@@ -161,7 +235,13 @@ a{
     background-color: #2F303A;
     display: flex;
     justify-content: center;
-    padding: 200px 0px;
+    padding: 170px 0px;
+    background-image: url('../images/team-work.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: inset 1600px 600px rgba(47,48,58, 40%);
+    background-size: contain;
+    min-width: 1600px;
 }
 #order ul{
     display: flex;
@@ -207,9 +287,15 @@ a{
     letter-spacing: 0.03em;
    display: flex;
 }
+.lorem-index h4{
+    margin:0;
+    padding-top:30px;
+    padding-bottom: 10px;
+}
 .lorem-index p{
     line-height: 171%;
     color:#757575;
+    margin:0;
 }
 ul.lorem-index{
     padding-left: 0;
@@ -218,6 +304,15 @@ ul.lorem-index{
 }
 .lorem-index li{
     padding: 0 7px;
+}
+.div-icon-lorem{
+    width: 270px;
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /*czym się zajmujemy*/
 
@@ -236,15 +331,11 @@ ul.lorem-index{
 /*id team w index.html*/
 #team {
     background-color: #F5F4FA;
-    font-size: 16px;
-    line-height: 119%;
-    letter-spacing: 0.03em;
     padding-top: 70px;
     display: flex;
     justify-content: center;
 }
-
-#team ul{
+#team ul.team-cards{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -254,8 +345,40 @@ ul.lorem-index{
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    height:368px;
-    width: 270px;
+}
+ul.socials-in-team{
+    padding-left: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+#team .socials-in-team li{
+    box-shadow:none;
+    width: 44px;
+    height: 44px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 50%;
+}
+#team .socials-in-team li:first-child{
+    margin-left: 0;
+}
+#team .socials-in-team svg{
+    fill:#AFB1B8;
+}
+#team .socials-in-team li:hover,
+#team .socials-in-team li:focus{
+    background: #2196F3;
+    border-radius: 50%;
+}
+#team .socials-in-team li:hover svg,
+#team .socials-in-team li:focus svg{
+    fill: #ffffff;
 }
 #team h4{
     font-weight: 500;
@@ -274,10 +397,54 @@ ul.lorem-index{
     text-align: center;
     letter-spacing: 0.03em;
     color: #757575;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     padding-top: 10px;
     margin:0;
 }
+/*nasi klienci #clients*/
+#clients{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.clients-logo-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+}
+#clients li{
+    width:170px;
+    height:92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#clients li:first-child{
+    margin-left: 0;
+}
+#clients li:hover,
+#clients li:focus{
+    border: 1px solid #2196F3;
+}
+#clients h2{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+}
+#clients svg{
+    fill:#AFB1B8;
+}
+#clients li:hover svg,
+#clients li:focus svg{
+    fill:#2196F3;
+}
+
 /*przyciski w portfolio.html*/
 .filter-buttons{
     line-height: 162%;
@@ -294,6 +461,9 @@ ul.lorem-index{
     margin-left:5px;
     margin-right:5px;
     margin-bottom: 34px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
 }
 
 .filter-buttons button:hover,
@@ -322,6 +492,9 @@ ul.lorem-index{
     width: 370px;
     height:404px;
     margin-top: 30px;
+}
+.projects li:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .projects li:nth-child(-n+3){
     margin-top: 0;
